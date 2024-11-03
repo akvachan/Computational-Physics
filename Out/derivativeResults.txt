@@ -1,0 +1,4 @@
+Function: Polynomial x^3+x^2+x
+Input: 15.0
+Derivative order: 2
+Result: 93.678
