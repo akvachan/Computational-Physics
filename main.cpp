@@ -44,7 +44,8 @@ int main(int argc, char *argv[]) {
 
   // Calculate derivative
   double derivative = comph::Derivate(x, [](double x){
-    return x*x*x+x*x+x;
+    return (x*x*x)+(x*x)+(x)
+    ;
   }, n);
 
   // Save the result to the file
@@ -57,5 +58,5 @@ int main(int argc, char *argv[]) {
           << "Result: " << derivative << "\n";
   outFile.close();
 
-  return 0;
+ return 0;
 }
