@@ -1,34 +1,39 @@
                             Computational Physics Utilities
-                                    Version 1.0, 2024
+                                    Version 1.0, 2023
 DESCRIPTION
 
-  This repository contains a collection of C++ utilities and functions commonly used in computational
-  physics. The main components include functions for:
+This repository contains a collection of C++ utilities and functions
+commonly used in computational physics. The main components include
+functions for:
 
-    * Numerical differentiation
-    * Combinatorial calculations (e.g., binomial coefficients)
-    * Unit conversions, such as converting decimal integers to binary representations
+  * Numerical differentiation
+  * Combinatorial calculations (e.g., binomial coefficients)
+  * Unit conversions, such as converting decimal integers to binary
+    representations
 
-  The code is organized into modular components with separate headers and implementations for each
-  functionality, ensuring clarity, reusability, and maintainability.
+The code is organized into modular components with separate headers and
+implementations for each functionality, ensuring clarity, reusability, and
+maintainability.
 
 DIRECTORY STRUCTURE
 
    src/
        MathUtils.cpp               - Implementation of combinatorial functions
-       DerivativeCalculator.cpp    - Implementation of numerical differentiation functions
-       UnitConverter.cpp           - Implementation of unit conversion functions (decimal to binary)
+       DerivativeCalculator.cpp    - Implementation of numerical differentiation
+       UnitConverter.cpp           - Implementation of unit conversion functions
+                                     (decimal to binary)
 
    include/
        MathUtils.hpp               - Header file for combinatorial functions
-       DerivativeCalculator.hpp    - Header file for numerical differentiation functions
+       DerivativeCalculator.hpp    - Header file for numerical differentiation
        UnitConverter.hpp           - Header file for unit conversion functions
 
    README.txt                      - Project documentation
 
 DEPENDENCIES
 
-  This project is implemented in standard C++17 and does not have any external dependencies.
+This project is implemented in standard C++17 and does not have any external
+dependencies.
 
 INSTALLATION AND SETUP
 
@@ -41,8 +46,8 @@ INSTALLATION AND SETUP
 
   2. Build the Project
 
-     This repository uses CMake to manage builds. Run the following commands to create a build directory,
-     configure the project, and compile:
+     This repository uses CMake to manage builds. Run the following commands
+     to create a build directory, configure the project, and compile:
 
         mkdir build
         cd build
@@ -51,63 +56,67 @@ INSTALLATION AND SETUP
 
   3. Run Tests or Executables
 
-     After building, run any test executables generated in the build to ensure the setup is working correctly.
+     After building, run any test executables generated in the build to ensure
+     the setup is working correctly.
 
 USAGE
 
 	1.	Combinatorial Functions
 
-      The combinatorial functions calculate binomial coefficients (n choose k).
+    The combinatorial functions calculate binomial coefficients (n choose k).
 
-        #include "MathUtils.hpp"
+    #include "MathUtils.hpp"
 
-        int main() {
-            int n = 5, k = 2;
-            double binomialCoefficient = comph::C(n, k);
-            std::cout << "C(" << n << ", " << k << ") = " << binomialCoefficient << std::endl;
-            return 0;
-        }
+    int main() {
+        int n = 5, k = 2;
+        double binomialCoefficient = comph::C(n, k);
+        std::cout << "C(" << n << ", " << k << ") = " << binomialCoefficient
+                  << std::endl;
+        return 0;
+    }
 
 	2.	Numerical Differentiation
 
-      The numerical differentiation functions compute the n-th derivative of a function at a given point.
+    The numerical differentiation functions compute the n-th derivative of
+    a function at a given point.
 
-        #include "DerivativeCalculator.hpp"
+    #include "DerivativeCalculator.hpp"
 
-        int main() {
-            double x = 1.0;
-            int derivativeOrder = 2;
-            double result = comph::Derivate(x, comph::f, derivativeOrder);
-            std::cout << "The " << derivativeOrder << "-th derivative of f at x = " << x << " is " << result << std::endl;
-            return 0;
-        }
+    int main() {
+        double x = 1.0;
+        int derivativeOrder = 2;
+        double result = comph::Derivate(x, comph::f, derivativeOrder);
+        std::cout << "The " << derivativeOrder << "-th derivative of f at x = "
+                  << x << " is " << result << std::endl;
+        return 0;
+    }
 
   3.	Unit Conversion Functions
-      The unit conversion functions convert a decimal integer to its binary representation.
 
-        #include "UnitConverter.hpp"
-        #include <iostream>
+    The unit conversion functions convert a decimal integer to its binary
+    representation.
 
-        int main() {
-            int decimalNumber = 10;
-            auto binaryRepresentation = comph::decimalToBinary(decimalNumber);
-            std::cout << "Binary of " << decimalNumber << ": ";
-            for (bool bit : binaryRepresentation) {
-                std::cout << bit;
-            }
-            std::cout << std::endl;
-            return 0;
+    #include "UnitConverter.hpp"
+    #include <iostream>
+
+    int main() {
+        int decimalNumber = 10;
+        auto binaryRepresentation = comph::decimalToBinary(decimalNumber);
+        std::cout << "Binary of " << decimalNumber << ": ";
+        for (bool bit : binaryRepresentation) {
+            std::cout << bit;
         }
-
+        std::cout << std::endl;
+        return 0;
+    }
 
 DOCUMENTATION
 
-  All functions and files are documented using Doxygen-style comments. You can generate the documentation
-  using Doxygen by running:
+All functions and files are documented using Doxygen-style comments. You can
+generate the documentation using Doxygen by running:
 
-    doxygen Doxyfile
+   doxygen Doxyfile
 
 LICENSE
 
-  This project is licensed under the Apache License. See LICENSE for more details.
-
+This project is licensed under the Apache License. See LICENSE for more details.
