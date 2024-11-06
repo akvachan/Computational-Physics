@@ -59,57 +59,6 @@ INSTALLATION AND SETUP
      After building, run any test executables generated in the build to ensure
      the setup is working correctly.
 
-USAGE
-
-	1.	Combinatorial Functions
-
-    The combinatorial functions calculate binomial coefficients (n choose k).
-
-    #include "MathUtils.hpp"
-
-    int main() {
-        int n = 5, k = 2;
-        double binomialCoefficient = comph::C(n, k);
-        std::cout << "C(" << n << ", " << k << ") = " << binomialCoefficient
-                  << std::endl;
-        return 0;
-    }
-
-	2.	Numerical Differentiation
-
-    The numerical differentiation functions compute the n-th derivative of
-    a function at a given point.
-
-    #include "DerivativeCalculator.hpp"
-
-    int main() {
-        double x = 1.0;
-        int derivativeOrder = 2;
-        double result = comph::Derivate(x, comph::f, derivativeOrder);
-        std::cout << "The " << derivativeOrder << "-th derivative of f at x = "
-                  << x << " is " << result << std::endl;
-        return 0;
-    }
-
-  3.	Unit Conversion Functions
-
-    The unit conversion functions convert a decimal integer to its binary
-    representation.
-
-    #include "UnitConverter.hpp"
-    #include <iostream>
-
-    int main() {
-        int decimalNumber = 10;
-        auto binaryRepresentation = comph::decimalToBinary(decimalNumber);
-        std::cout << "Binary of " << decimalNumber << ": ";
-        for (bool bit : binaryRepresentation) {
-            std::cout << bit;
-        }
-        std::cout << std::endl;
-        return 0;
-    }
-
 DOCUMENTATION
 
 All functions and files are documented using Doxygen-style comments. You can
