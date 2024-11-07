@@ -16,55 +16,55 @@ implementations for each functionality, ensuring clarity, reusability, and
 maintainability.
 
 DIRECTORY STRUCTURE
-
-   src/
-       MathUtils.cpp               - Implementation of combinatorial functions
-       DerivativeCalculator.cpp    - Implementation of numerical differentiation
-       UnitConverter.cpp           - Implementation of unit conversion functions
-                                     (decimal to binary)
-
-   include/
-       MathUtils.hpp               - Header file for combinatorial functions
-       DerivativeCalculator.hpp    - Header file for numerical differentiation
-       UnitConverter.hpp           - Header file for unit conversion functions
-
-   README.txt                      - Project documentation
+   
+  Docs/                           - Contains PDF documentation and Doxyfile
+  Include/                        - All header files
+      MathUtils.hpp               - Header file for combinatorial functions
+      DerivativeCalculator.hpp    - Header file for numerical differentiation
+      UnitConverter.hpp           - Header file for unit conversion functions
+  Out/                            - Output of the programs may be saved here
+  Source/                         - All core source files
+  Tests/                          - Test suits
+  Utils/                          - For utilities and helper functions
+      MathUtils.cpp               - Implementation of combinatorial functions
+      DerivativeCalculator.cpp    - Implementation of numerical differentiation
+      UnitConverter.cpp           - Implementation of unit conversion functions
 
 DEPENDENCIES
 
-This project is implemented in standard C++17 and does not have any external
+This project is implemented in standard C++20 and does not have any external
 dependencies.
 
 INSTALLATION AND SETUP
 
   1. Clone the Repository
 
-     To begin, clone the repository using the following command:
+  To begin, clone the repository using the following command:
 
-        git clone https://github.com/yourusername/ComputationalPhysicsUtils.git
-        cd ComputationalPhysicsUtils
+      git clone https://github.com/yourusername/ComputationalPhysicsUtils.git
+      cd ComputationalPhysicsUtils
 
-  2. Build the Project
+  2. Build the project and run main.cpp file
 
-     This repository uses CMake to manage builds. Run the following commands
-     to create a build directory, configure the project, and compile:
+  This repository uses CMake to manage builds. Run the following command
+  to create a build directory, configure the project, compile and run main.cpp:
 
-        mkdir build
-        cd build
-        cmake ..
-        make
-
-  3. Run Tests or Executables
-
-     After building, run any test executables generated in the build to ensure
-     the setup is working correctly.
+      ./main.sh
 
 DOCUMENTATION
 
 All functions and files are documented using Doxygen-style comments. You can
-generate the documentation using Doxygen by running:
+generate the documentation using Doxygen:
 
-   doxygen Doxyfile
+   doxygen Docs/Doxyfile
+   
+   Optional (if PDF is preferred):
+   cd Docs/latex
+   make pdf
+   cd ../../
+   
+View html by opening Docs/html/index.html
+View pdf by opening Docs/latex/refman.pdf 
 
 LICENSE
 

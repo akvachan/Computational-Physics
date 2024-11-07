@@ -8,7 +8,6 @@
 
 #pragma once
 
-/// Namespace for combinatorial utilities.
 namespace comph {
 
 /**

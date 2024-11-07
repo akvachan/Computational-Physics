@@ -43,10 +43,8 @@ int main(int argc, char *argv[]) {
   int n = std::atoi(argv[3]);
 
   // Calculate derivative
-  double derivative = comph::Derivate(x, [](double x){
-    return (x*x*x)+(x*x)+(x)
-    ;
-  }, n);
+  double derivative = comph::Derivate(
+      x, [](double x) { return (x * x * x) + (x * x) + (x); }, n);
 
   // Save the result to the file
   std::ofstream outFile;
@@ -57,6 +55,7 @@ int main(int argc, char *argv[]) {
           << "Derivative order: " << argv[3] << "\n"
           << "Result: " << derivative << "\n";
   outFile.close();
-
- return 0;
+  
+  std::cout << "This is output of the program" << std::endl;
+  return 0;
 }
