@@ -5,6 +5,7 @@ DESCRIPTION
 This repository contains a collection of C++ utilities, functions
 and data structures commonly used in computational physics. 
 
+
 DIRECTORY STRUCTURE
    
   Docs/                           - Contains PDF documentation and Doxyfile
@@ -30,41 +31,41 @@ DIRECTORY STRUCTURE
     DerivativeCalculator.cpp      - Implementation of numerical differentiation
     UnitConverter.cpp             - Implementation of unit conversion functions
 
+
 DEPENDENCIES
 
 This project is implemented in standard C++20 and does not have any external
 dependencies.
 
-INSTALLATION AND SETUP
 
-1. Clone the Repository
+INSTALLATION AND SETUP
 
 To begin, clone the repository using the following command:
 
 git clone https://github.com/akvachan/Computational-Physics.git
 cd Computational-Physics
 
-2. Build the project and run main.cpp file
-
 This repository uses CMake to manage builds. Run the following command
 to create a build directory, configure the project, compile and run main.cpp:
 
 ./main.sh
+
 
 DOCUMENTATION
 
 All functions and files are documented using Doxygen-style comments. You can
 generate the documentation using Doxygen:
 
-   doxygen Docs/Doxyfile
-   
-   Optional (if PDF is preferred):
-   cd Docs/latex
-   make pdf
-   cd ../../
+doxygen Docs/Doxyfile
+
+Optional (if PDF is preferred):
+cd Docs/latex
+make pdf
+cd ../../
    
 View html by opening Docs/html/index.html
 View pdf by opening Docs/latex/refman.pdf 
+
 
 LICENSE
 
