@@ -2,34 +2,33 @@
                                     Version 1.0, 2023
 DESCRIPTION
 
-This repository contains a collection of C++ utilities and functions
-commonly used in computational physics. The main components include
-functions for:
-
-  * Numerical differentiation
-  * Combinatorial calculations (e.g., binomial coefficients)
-  * Unit conversions, such as converting decimal integers to binary
-    representations
-
-The code is organized into modular components with separate headers and
-implementations for each functionality, ensuring clarity, reusability, and
-maintainability.
+This repository contains a collection of C++ utilities, functions
+and data structures commonly used in computational physics. 
 
 DIRECTORY STRUCTURE
    
   Docs/                           - Contains PDF documentation and Doxyfile
   In/                             - Input files to the program can be saved here
   Include/                        - All header files
-      MathUtils.hpp               - Header file for combinatorial functions
-      DerivativeCalculator.hpp    - Header file for numerical differentiation
-      UnitConverter.hpp           - Header file for unit conversion functions
+    MathUtils.hpp                 - Header file for combinatorial functions
+    DerivativeCalculator.hpp      - Header file for numerical differentiation
+    UnitConverter.hpp             - Header file for unit conversion functions
+    DynamicMatrix.hpp             - Header file for dynamic matrix
+    HashMatrix.hpp                - Header file for hash matrix
+    StaticMatrix.hpp              - Header file for static matrix
+    VectorMatrix.hpp              - Header file for vector matrix
   Out/                            - Output of the programs may be saved here
   Source/                         - All core source files
+    Matrix/                       - Source directory for matrices implementation
+      DynamicMatrix.cpp           - Implementation of dynamic matrix
+      HashMatrix.cpp              - Implementation of hash matrix
+      StaticMatrix.cpp            - Implementation of static matrix
+      VectorMatrix.cpp            - Implementation of vector matrix
   Tests/                          - Test suits
   Utils/                          - For utilities and helper functions
-      MathUtils.cpp               - Implementation of combinatorial functions
-      DerivativeCalculator.cpp    - Implementation of numerical differentiation
-      UnitConverter.cpp           - Implementation of unit conversion functions
+    MathUtils.cpp                 - Implementation of combinatorial functions
+    DerivativeCalculator.cpp      - Implementation of numerical differentiation
+    UnitConverter.cpp             - Implementation of unit conversion functions
 
 DEPENDENCIES
 
@@ -38,19 +37,19 @@ dependencies.
 
 INSTALLATION AND SETUP
 
-  1. Clone the Repository
+1. Clone the Repository
 
-  To begin, clone the repository using the following command:
+To begin, clone the repository using the following command:
 
-      git clone https://github.com/akvachan/Computational-Physics.git
-      cd Computational-Physics
+git clone https://github.com/akvachan/Computational-Physics.git
+cd Computational-Physics
 
-  2. Build the project and run main.cpp file
+2. Build the project and run main.cpp file
 
-  This repository uses CMake to manage builds. Run the following command
-  to create a build directory, configure the project, compile and run main.cpp:
+This repository uses CMake to manage builds. Run the following command
+to create a build directory, configure the project, compile and run main.cpp:
 
-      ./main.sh
+./main.sh
 
 DOCUMENTATION
 
