@@ -1,0 +1,118 @@
+\doxysection{comph Namespace Reference}
+\hypertarget{namespacecomph}{}\label{namespacecomph}\index{comph@{comph}}
+
+
+Namespace containing computational helper functions.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr double \mbox{\hyperlink{namespacecomph_a2ccc1eec51b2ce6d09de4211ea6ff658}{f}} (double x)
+\begin{DoxyCompactList}\small\item\em A sample mathematical function to be used in differentiation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacecomph_a6b6aaabc173e43bbf15305bc394d9ac5}{Derivate}} (double x, double(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{namespacecomph_a2ccc1eec51b2ce6d09de4211ea6ff658}{f}})(double), int n)
+\begin{DoxyCompactList}\small\item\em Numerically calculates the n-\/th derivative of a given function at a point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacecomph_ad3913b04cdddeeeaad111a2eedd9623e}{C}} (int n, int k)
+\begin{DoxyCompactList}\small\item\em Calculates the binomial coefficient C(n, k). \end{DoxyCompactList}\item 
+std\+::deque$<$ bool $>$ \mbox{\hyperlink{namespacecomph_a4bba60c5c07be52fb2d6751d91a48a92}{decimal\+To\+Binary}} (int decimal\+Number)
+\begin{DoxyCompactList}\small\item\em Converts a decimal integer to its binary representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace containing computational helper functions. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecomph_ad3913b04cdddeeeaad111a2eedd9623e}\index{comph@{comph}!C@{C}}
+\index{C@{C}!comph@{comph}}
+\doxysubsubsection{\texorpdfstring{C()}{C()}}
+{\footnotesize\ttfamily \label{namespacecomph_ad3913b04cdddeeeaad111a2eedd9623e} 
+double comph\+::C (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the binomial coefficient C(n, k). 
+
+Computes the binomial coefficient, often read as "{}n choose k"{}, which represents the number of ways to choose k elements from a set of n elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The total number of items. \\
+\hline
+{\em k} & The number of items to choose. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The binomial coefficient as a double. 
+\end{DoxyReturn}
+\Hypertarget{namespacecomph_a4bba60c5c07be52fb2d6751d91a48a92}\index{comph@{comph}!decimalToBinary@{decimalToBinary}}
+\index{decimalToBinary@{decimalToBinary}!comph@{comph}}
+\doxysubsubsection{\texorpdfstring{decimalToBinary()}{decimalToBinary()}}
+{\footnotesize\ttfamily \label{namespacecomph_a4bba60c5c07be52fb2d6751d91a48a92} 
+std\+::deque$<$ bool $>$ comph\+::decimal\+To\+Binary (\begin{DoxyParamCaption}\item[{int}]{decimal\+Number}{}\end{DoxyParamCaption})}
+
+
+
+Converts a decimal integer to its binary representation. 
+
+This function takes an integer in decimal format and returns its binary representation as a deque of boolean values, where each boolean represents a binary digit (0 or 1).
+
+The least significant bit (LSB) is stored as the first element in the deque, and the most significant bit (MSB) is at the last element of the deque.
+
+
+\begin{DoxyParams}{Parameters}
+{\em decimal\+Number} & The integer to be converted to binary. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A deque of boolean values representing the binary form of the input.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function is intended for non-\/negative integers. 
+\end{DoxyNote}
+\Hypertarget{namespacecomph_a6b6aaabc173e43bbf15305bc394d9ac5}\index{comph@{comph}!Derivate@{Derivate}}
+\index{Derivate@{Derivate}!comph@{comph}}
+\doxysubsubsection{\texorpdfstring{Derivate()}{Derivate()}}
+{\footnotesize\ttfamily \label{namespacecomph_a6b6aaabc173e43bbf15305bc394d9ac5} 
+double comph\+::\+Derivate (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{double(\texorpdfstring{$\ast$}{*}}]{f~}{)(double), }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Numerically calculates the n-\/th derivative of a given function at a point. 
+
+This function uses finite difference methods to approximate the n-\/th derivative of a specified mathematical function {\ttfamily f} at a point {\ttfamily x}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The point at which to calculate the derivative. \\
+\hline
+{\em f} & A pointer to the function to differentiate. \\
+\hline
+{\em n} & The order of the derivative (e.\+g., 1 for the first derivative). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The approximated value of the n-\/th derivative at point {\ttfamily x}.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+For {\ttfamily n = 0}, the function simply returns {\ttfamily f(x)}. 
+\end{DoxyNote}
+\Hypertarget{namespacecomph_a2ccc1eec51b2ce6d09de4211ea6ff658}\index{comph@{comph}!f@{f}}
+\index{f@{f}!comph@{comph}}
+\doxysubsubsection{\texorpdfstring{f()}{f()}}
+{\footnotesize\ttfamily \label{namespacecomph_a2ccc1eec51b2ce6d09de4211ea6ff658} 
+double comph\+::f (\begin{DoxyParamCaption}\item[{double}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+A sample mathematical function to be used in differentiation. 
+
+This function is defined as {\ttfamily f(x) = 2 \texorpdfstring{$\ast$}{*} x \texorpdfstring{$\ast$}{*} x}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The input value for the function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The computed result of the function {\ttfamily f(x)}. 
+\end{DoxyReturn}

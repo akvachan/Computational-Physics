@@ -18,6 +18,7 @@ maintainability.
 DIRECTORY STRUCTURE
    
   Docs/                           - Contains PDF documentation and Doxyfile
+  In/                             - Input files to the program can be saved here
   Include/                        - All header files
       MathUtils.hpp               - Header file for combinatorial functions
       DerivativeCalculator.hpp    - Header file for numerical differentiation
@@ -41,8 +42,8 @@ INSTALLATION AND SETUP
 
   To begin, clone the repository using the following command:
 
-      git clone https://github.com/yourusername/ComputationalPhysicsUtils.git
-      cd ComputationalPhysicsUtils
+      git clone https://github.com/akvachan/Computational-Physics.git
+      cd Computational-Physics
 
   2. Build the project and run main.cpp file
 

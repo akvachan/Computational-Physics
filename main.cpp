@@ -28,7 +28,9 @@ int main(int argc, char *argv[]) {
 }
 **/
 
+
 // main to test numerical derivation
+/**
 int main(int argc, char *argv[]) {
   if (argc < 4) {
     std::cerr << "Usage: " << argv[0] << " <string: file path>"
@@ -55,7 +57,8 @@ int main(int argc, char *argv[]) {
           << "Derivative order: " << argv[3] << "\n"
           << "Result: " << derivative << "\n";
   outFile.close();
-  
+
   std::cout << "This is output of the program" << std::endl;
   return 0;
 }
+**/
