@@ -15,22 +15,26 @@ dependencies.
 
 To begin, clone the repository using the following command:
 
+```
 git clone https://github.com/akvachan/Computational-Physics.git
 cd Computational-Physics
+```
 
 This repository uses CMake to manage builds. Run the following command
 to create a build directory, configure the project, compile and run main.cpp:
 
+```
 ./main.sh
-
+```
 
 ### DOCUMENTATION
 
 All functions and files are documented using Doxygen-style comments. You can
 generate the documentation using Doxygen:
 
+```
 doxygen Docs/Doxyfile
-
+```
 
 ### LICENSE
 
