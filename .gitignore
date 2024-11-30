@@ -33,6 +33,7 @@
 
 # Cache files
 .cache/
+.DS_Store
 
 # Build files 
 Build/
