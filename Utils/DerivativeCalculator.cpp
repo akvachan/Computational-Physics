@@ -7,10 +7,15 @@
  * @encoding UTF-8
  */
 
+/** Includes (Own Implementations) **/
 #include "DerivativeCalculator.hpp"
 #include "MathUtils.hpp"
+
+/** Includes (Standard Library) **/
 #include <cmath>
 
+
+ 
 namespace comph {
 
 constexpr double f(double x) { return 2 * x * x; }

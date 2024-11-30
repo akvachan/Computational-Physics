@@ -1,4 +1,0 @@
-namespace comph {
-
-
-} // namespace comph
